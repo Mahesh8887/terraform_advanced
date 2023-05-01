@@ -1,7 +1,7 @@
 pipeline {
     agent any
       tools {
-        terragorm 'terraform'
+        terraform 'terraform'
       }
     stages{
         stage('Git Code checkout'){
