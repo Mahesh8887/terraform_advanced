@@ -6,7 +6,7 @@ pipeline {
     stages{
         stage('Git Code checkout'){
             steps{
-                git branch: 'main', url: 'https://github.com/Mahesh8887/project-kubernates.git' 
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Mahesh8887/terraform_advanced.git']]) 
             }
         }
         stage('terraform init'){
