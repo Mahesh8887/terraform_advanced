@@ -22,14 +22,6 @@ resource "aws_instance" "myfirstinstance" {
                 }
 }
 
-resource "aws_s3_bucket" "bucket_form_terraform_by_MVB" {
-        bucket = "aws-s3-bucket.bucket-form-terraform.mahesh"
-        tags = {
-                Name = "bucket_from_terraform_by_mahesh"
-                Environment = "DevQA"
-                }
-}
-
 output "ec2_public_ips" {
         value = aws_instance.myfirstinstance[*].public_ip
         }
