@@ -8,6 +8,6 @@ resource "aws_instance" "myfirstinstance" {
 }                                         
 
 output "ec2_public_ips" {
-        value = aws_instance.myfirstinstance[*].public_ip
-        }
+   value = aws_instance.myfirstinstance[*].public_ip
+}
                                            
